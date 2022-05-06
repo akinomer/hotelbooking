@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+	<!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-slider.css" crossorigin="anonymous" />
+        <link rel="stylesheet" href="assets/css/magicsuggest.css" crossorigin="anonymous" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"  crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Custom stlylesheet -->
+	
+        <script src='assets/js/magicksuggest.js'></script>
+        
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        <!-- Font Awesome -->
+        <style>
+            
+            #pageMessages {
+                position: fixed;
+                bottom: 15px;
+                right: 15px;
+                width: 30%;
+              }
+
+              .alert {
+                position: relative;
+              }
+
+              .alert .close {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 1em;
+              }
+
+              .alert .fa {
+                margin-right:.3em;
+              }
+            
+            #slider-div {
+                display: flex;
+                flex-direction: row;
+                margin-top: 30px;
+                margin-bottom: 15px;
+              }
+
+              #slider-div>div {
+                margin: 8px;
+              }
+
+              .slider-label {
+                position: absolute;
+                padding: 4px;
+                font-size: 14px;
+              }
+              
+              @media only screen and (max-width: 600px) {
+                .slider-label {
+                    position: absolute;
+                    padding: 4px;
+                    font-size: 14px;
+                    top: 0px !important;
+                  }
+              }
+              
+              .booking-form .form-control:first-child {
+                 height: 40px;
+                 padding-top: 7px;
+              }
+              
+        </style>
+        
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="booking-cta">
+							<h1>Book your room today</h1>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+						</div>
+					</div>
+					<div class="col-md-7 col-md-offset-1">
+						<div class="booking-form">
+							<form>
+								<div class="row">
+									<div class="col-md-12">
+                                                                            <div class="form-group">
+										<div class="ms-ctn form-control  ms-ctn-focus" style="" id="ms-complex-templating">
+                                                                                    <span class="ms-helper " style="display: none;"></span>
+                                                                                    <div class="ms-sel-ctn">
+                                                                                       <input type="text" class="" placeholder="Where are you going?">
+                                                                                       <div style="display: none;"></div>
+                                                                                    </div>
+                                                                                    <div class="ms-trigger">
+                                                                                       <div class="ms-trigger-ico"></div>
+                                                                                    </div>
+                                                                                 </div>
+                                                                                </div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Check-in</span>
+                                                                                        <input class="form-control" type="date" id="checkin" required>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Check-out</span>
+											<input class="form-control" type="date" id="checkout" required>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Adults (18+)</span>
+                                                                                        <select class="form-control" id="adult">
+												<option value='1'>1</option>
+												<option value='2'>2</option>
+                                                                                                <option value="3">3</option>
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Children (0-17)</span>
+                                                                                        <select class="form-control" id="children">
+												<option value='0'>0</option>
+                                                                                                <option value="1">1</option>
+												<option value='2'>2</option>
+                                                                                                <option value="3">3</option>
+												<option value='4'>4</option>
+                                                                                                <option value="5">5</option>
+												<option value='6'>6</option>
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+								</div>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <span class="form-label">Room Quantity</span>
+                                                                                <select class="form-control" id="roomnumber">
+                                                                                        <option value="1">1</option>
+                                                                                        <option value='2'>2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value='4'>4</option>
+                                                                                        <option value="5">5</option>
+                                                                                        <option value='6'>6</option>
+                                                                                </select>
+                                                                            <span class="select-arrow"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                        <div class="col-md-6">
+                                                                            <div id="slider-outer-div">
+                                                                            <div id="slider-max-label" class="slider-label text-center"></div>
+                                                                            <div id="slider-min-label" class="slider-label text-center"></div>
+                                                                            <div id="slider-div">
+                                                                                  <input id="ex2" type="text" data-slider-min="50"
+                                                                                   data-slider-max="1000" data-slider-value="[50,1000]"
+                                                                                   data-slider-tooltip="hide" style="width:100%;"/>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                </div>
+								<div class="form-btn">
+                                                                    <button id="myBtn" onclick="getFormValues();" type="button" class="submit-btn">Show Hotels</button>
+								</div>
+                                                            <input type="hidden" id="destination" name="destination">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div id="pageMessages"></div>
+    <script>
+        
+        $(function() {
+            $('#ms-complex-templating').magicSuggest({
+                data: 'locationget.php',
+                renderer: function(data){
+                    
+                    if(data.image_url!=null || data.image_url!='' || data.label!='undefined'){
+                        
+                        /*return '<div class="container">'+
+                            '<div class="row">'+
+                                '<div class="col-md-3">'+
+                                    '<img class="img-resposive" style="width:50% !important; height:auto;" src="' + data.image_url + '" />'+
+                                '</div>'+
+                                '<div class="col-md-9">'+
+                                    '<div style="font-weight: bold; color: #333; font-size: 10px; line-height: 11px">' + data.city_name + '</div>' +
+                                    '<div style="color: #999; font-size: 9px">' + data.label + '</div>' +
+                                '</div>'+
+                            '</div>'+
+                        '</div>';*/
+                        
+                        
+                        
+                        return '<div style="padding: 0px; overflow:hidden;" onclick="getDestid('+data.dest_id+')">' +
+                                    '<div style="display:none;"><input type="text" id="dest_id-'+data.dest_id+'" value="'+data.dest_id+'"></div>'+
+                                    '<table class="table">'+
+                                        '<tr>'+
+                                            '<td style="width: 25%;vertical-align: middle;"><img style="width:100%; height:auto;" src="' + data.image_url + '" /></td>'+
+                                            '<td style="width: 75%;vertical-align: middle;">' + data.city_name + '<br><span style="font-size:12px;">' + data.label + '</span></td>'+
+                                        '</tr>'+
+                                    '</table>'+
+                                '</div>'; // make sure we have closed our dom stuff*/
+                    }
+                    
+                    
+                }
+            });
+        });
+        
+        function getFormValues(){
+            
+            if($('#checkin').val()==''){ 
+                createAlert('','Something went wrong','Please select Check-in date.','danger',true,false,'pageMessages');
+            }
+            else if($('#checkout').val()==''){
+                createAlert('','Something went wrong','Please select Check-out date.','danger',true,false,'pageMessages');
+            }
+            else if($('#destination').val()==''){
+                createAlert('','Something went wrong','Please select location.','danger',true,false,'pageMessages');
+            }else{
+                
+                document.getElementById("myBtn").disabled = true;
+                var maxPrice    = $('#slider-max-label').html().replace('$','').split('.')[0];
+                var minPrice    = $('#slider-min-label').html().replace('$','').split('.')[0];
+                var destId      = $('#destination').val();
+                var adult       = $('#adult').val();
+                var children    = $('#children').val();
+                var roomnumber  = $('#roomnumber').val();
+                var checkin     = $('#checkin').val();
+                var checkout    = $('#checkout').val();
+
+                console.log(maxPrice);
+                console.log(minPrice);
+                console.log(destId);
+                console.log(adult);
+                console.log(children);
+                console.log(roomnumber);
+                console.log(checkin);
+                console.log(checkout);
+                
+                $('#myBtn').html('<img src="img/spinner.gif" style="width:35px; height:auto;"> Please Wait, We are preparing the best results for you');
+
+                $.post("search_hotel.php", {
+                    maxPrice: maxPrice,
+                    minPrice: minPrice,
+                    destId: destId,
+                    adult: adult,
+                    children: children,
+                    roomnumber: roomnumber,
+                    checkin: checkin,
+                    checkout: checkout,
+                    pagenumber: 0
+                }, function(result){
+                    console.log(result);
+                    location.href = 'searchresult.php?record_id='+result;
+                });
+                
+            }
+            
+        }
+        
+        function getDestid(id){
+            $('#destination').val($("#dest_id-"+id).val());
+        }
+        
+        
+        function getLocation(){
+            
+            var location = $('#location').val();
+            
+            if(location.length > 2){
+                $.get("locationget.php?location="+location, function(data, status){
+                    console.log(JSON.parse(data));
+                });  
+            }
+        }
+       
+        const setLabel = (lbl, val) => {
+        const label = $(`#slider-${lbl}-label`);
+        label.text(val);
+        const slider = $(`#slider-div .${lbl}-slider-handle`);
+        const rect = slider[0].getBoundingClientRect();
+        label.offset({
+          top: rect.top - 30,
+          left: rect.left - 20
+        });
+      }
+      
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+
+        // These options are needed to round to whole numbers if that's what you want.
+        //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+        //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+      });
+
+      const setLabels = (values) => {
+        setLabel("min", formatter.format(values[0]));
+        setLabel("max", formatter.format(values[1]));
+      }
+
+
+      $('#ex2').slider().on('slide', function(ev) {
+        setLabels(ev.value);
+      });
+      setLabels($('#ex2').attr("data-value").split(","));
+      
+      
+      function createAlert(title, summary, details, severity, dismissible, autoDismiss, appendToId) {
+            var iconMap = {
+              info: "fa fa-info-circle",
+              success: "fa fa-thumbs-up",
+              warning: "fa fa-exclamation-triangle",
+              danger: "fa ffa fa-exclamation-circle"
+            };
+
+            var iconAdded = false;
+
+            var alertClasses = ["alert", "animated", "flipInX"];
+            alertClasses.push("alert-" + severity.toLowerCase());
+
+            if (dismissible) {
+              alertClasses.push("alert-dismissible");
+            }
+
+            var msgIcon = $("<i />", {
+              "class": iconMap[severity] // you need to quote "class" since it's a reserved keyword
+            });
+
+            var msg = $("<div />", {
+              "class": alertClasses.join(" ") // you need to quote "class" since it's a reserved keyword
+            });
+
+            if (title) {
+              var msgTitle = $("<h4 />", {
+                html: title
+              }).appendTo(msg);
+
+              if(!iconAdded){
+                msgTitle.prepend(msgIcon);
+                iconAdded = true;
+              }
+            }
+
+            if (summary) {
+              var msgSummary = $("<strong />", {
+                html: summary
+              }).appendTo(msg);
+
+              if(!iconAdded){
+                msgSummary.prepend(msgIcon);
+                iconAdded = true;
+              }
+            }
+
+            if (details) {
+              var msgDetails = $("<p />", {
+                html: details
+              }).appendTo(msg);
+
+              if(!iconAdded){
+                msgDetails.prepend(msgIcon);
+                iconAdded = true;
+              }
+            }
+
+
+            if (dismissible) {
+              var msgClose = $("<span />", {
+                "class": "close", // you need to quote "class" since it's a reserved keyword
+                "data-dismiss": "alert",
+                html: "<i class='fa fa-times-circle'></i>"
+              }).appendTo(msg);
+            }
+
+            $('#' + appendToId).prepend(msg);
+
+            if(autoDismiss){
+              setTimeout(function(){
+                msg.addClass("flipOutX");
+                setTimeout(function(){
+                  msg.remove();
+                },1000);
+              }, 5000);
+            }
+          }
+
+      
+      
+    </script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
