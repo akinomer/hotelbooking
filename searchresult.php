@@ -104,6 +104,6 @@
         
         </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxteZOFFJL6FJvWDBOrmKO3sHHSbq0hm4&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=xxxx&callback=myMap"></script>
    </body>
 </html>
